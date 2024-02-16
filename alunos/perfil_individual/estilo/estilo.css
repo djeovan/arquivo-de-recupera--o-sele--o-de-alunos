@@ -1,0 +1,52 @@
+header{
+    background-color: whitesmoke;
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: 1px 1px 1px rgb(198, 198, 198);
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    border: 1px solid black;
+    height: 600px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.for-group{
+    position: relative;
+    padding-top: 10;
+}
+.form-group input{
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: #acacac solid 2px;
+    background-color: transparent;
+    color: #000000;
+    transition: 0.15s all ease;
+}
+.form-group input:focus{
+    border-color: #eee;   
+}
+.form-group input::placeholder{
+    color: transparent;
+}
+.form-group .form-label{
+    position: absolute;
+    left: 670px;
+    font-size: 12px;
+    padding: 0 10px;
+    color: #acacac;
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+.form-group input:focus + .form-label,
+.for-group input:not(:placeholder-shown)+
+.form-label {
+    transform: translate(5px, -9px);
+    background-color: #acacac;
+    font-size: 12px;
+    color: #eee;
+}
